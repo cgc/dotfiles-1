@@ -27,8 +27,8 @@ hotkey.bind(mash, 'D', opendictionary)
 hotkey.bind(mash, ';', function() ext.grid.snap(window.focusedwindow()) end)
 hotkey.bind(mash, "'", function() fnutils.map(window.visiblewindows(), ext.grid.snap) end)
 
-hotkey.bind(mash, '=', function() ext.grid.adjustwidth( 1) end)
-hotkey.bind(mash, '-', function() ext.grid.adjustwidth(-1) end)
+hotkey.bind(mash, '=', function() ext.grid.adjustgrid( 1) end)
+hotkey.bind(mash, '-', function() ext.grid.adjustgrid(-1) end)
 
 hotkey.bind(mashshift, 'H', function() window.focusedwindow():focuswindow_west() end)
 hotkey.bind(mashshift, 'L', function() window.focusedwindow():focuswindow_east() end)
@@ -45,6 +45,7 @@ hotkey.bind(mash, 'K', ext.grid.pushwindow_up)
 hotkey.bind(mash, 'H', ext.grid.pushwindow_left)
 hotkey.bind(mash, 'L', ext.grid.pushwindow_right)
 
+hotkey.bind(mash, 'Y', ext.grid.resizewindow_shorter)
 hotkey.bind(mash, 'U', ext.grid.resizewindow_taller)
 hotkey.bind(mash, 'O', ext.grid.resizewindow_wider)
 hotkey.bind(mash, 'I', ext.grid.resizewindow_thinner)
